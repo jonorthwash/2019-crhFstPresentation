@@ -195,6 +195,7 @@
 			/* example */
 			ex {
 				color: cyan ;
+				font-style: italic;
 				/* font-weight: bold ; */
 			}
 			ex.white {
@@ -322,12 +323,12 @@
 
 			.code {
 				border: 2px solid silver !important ;
-				background-color: #555 ;
+				background-color: #111 ;
 				padding: 0.2em !important;
 				text-align: left ;
 				font-family: "DejaVu Sans Mono", "Liberation Mono", monospace !important ;
-				font-size: 70% !important ;
-				color: #6f6;
+				font-size: 90% !important ;
+				color: #fff;
 				line-height: 0.975 !important;
 				border-radius: 5px;
 			}
@@ -379,10 +380,24 @@
 				<section>
 					<h2>Overview</h2>
 					<ul>
-						<li>Background</li>
-						<li>Methodology</li>
-						<li>Evaluation</li>
-						<li>Concluding remarks</li>
+						<li>We present a <span class="highlight">biscriptual morphological transducer</span> for Crimean Tatar</li>
+						<ul>
+							<li>A <span class="highlight">morphological transducer</span> maps between form and analysis:<br/>
+								<ex>köyünde</ex> ↔ <span class="code">köy<tag>n</tag><tag>px3sp</tag><tag>loc</tag></span>
+							</li>
+							<li>This transducer supports both orthographies, Cyrillic and Latin:<br/>
+								<ex>köyünde</ex> ↔ <span class="code">köy<tag>n</tag><tag>px3sp</tag><tag>loc</tag></span><br />
+								<ex>коюнде</ex> ↔ <span class="code">köy<tag>n</tag><tag>px3sp</tag><tag>loc</tag></span>
+							</li>
+							<li>Free / Open Source, <a href="https://github.com/apertium/apertium-crh">https://github.com/apertium/apertium-crh</a></li>
+						</ul>
+						<li>Roadmap:</li>
+						<ul>
+							<li>Context and Background</li>
+							<li>Methodology and Issues</li>
+							<li>Evaluation and Results</li>
+							<li>Concluding remarks</li>
+						</ul>
 					</ul>
 				</section>
 
