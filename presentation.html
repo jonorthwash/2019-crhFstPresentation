@@ -206,7 +206,7 @@
 
 			/* example */
 			ex {
-				color: cyan ;
+				color: lightgreen ;
 				font-style: italic;
 				/* font-weight: bold ; */
 			}
@@ -305,6 +305,14 @@
 				vertical-align: super ;
 				-webkit-filter: brightness(70%); /* Safari 6.0 - 9.0 */
 				filter: brightness(70%);
+			}
+
+			table.nolines tr td {
+				border-bottom: none;
+			}
+
+			table.nolines tbody tr:last-child {
+				border-bottom: none;
 			}
 
 			.box {
@@ -483,9 +491,66 @@
 				</section>
 				<section>
 					<h2>Background: Orthographic Systems</h2>
-					<ul>
-						<li></li>
-					</ul>
+					<!-- div style="float: left; width: 30%;" -->
+					<div style="float: left; width: 25%; margin-left: -5em;">
+						<table class="nolines small" style="border-right: 1px solid white">
+							<tr><td class="highlight-cyan">b</td><td class="highlight-red">б</td></tr>
+							<tr><td class="highlight-cyan">c</td><td class="highlight-red">дж</td></tr>
+							<tr><td class="highlight-cyan">ç</td><td class="highlight-red">ч</td></tr>
+							<tr><td class="highlight-cyan">d</td><td class="highlight-red">д</td></tr>
+							<tr><td class="highlight-cyan">f</td><td class="highlight-red">ф</td></tr>
+							<tr><td class="highlight-cyan">g</td><td class="highlight-red">г</td></tr>
+							<tr><td class="highlight-cyan">ğ</td><td class="highlight-red">гъ</td></tr>
+							<tr><td class="highlight-cyan">h</td><td class="highlight-red">х</td></tr>
+							<tr><td class="highlight-cyan">j</td><td class="highlight-red">ж</td></tr>
+							<tr><td class="highlight-cyan">k</td><td class="highlight-red">к</td></tr>
+							<tr><td class="highlight-cyan">l</td><td class="highlight-red">л</td></tr>
+						<!--/table>
+						<table class="nolines small" style="border-right: 1px solid white"-->
+							<tr><td class="highlight-cyan">m</td><td class="highlight-red">м</td></tr>
+							<tr><td class="highlight-cyan">n</td><td class="highlight-red">н</td></tr>
+							<tr><td class="highlight-cyan">ñ</td><td class="highlight-red">нъ</td></tr>
+							<tr><td class="highlight-cyan">p</td><td class="highlight-red">п</td></tr>
+							<tr><td class="highlight-cyan">q</td><td class="highlight-red">къ</td></tr>
+							<tr><td class="highlight-cyan">r</td><td class="highlight-red">р</td></tr>
+							<tr><td class="highlight-cyan">s</td><td class="highlight-red">с</td></tr>
+							<tr><td class="highlight-cyan">t</td><td class="highlight-red">т</td></tr>
+							<tr><td class="highlight-cyan">v</td><td class="highlight-red">в</td></tr>
+							<tr><td class="highlight-cyan">y</td><td class="highlight-red">й</td></tr>
+							<tr><td class="highlight-cyan">z</td><td class="highlight-red">з</td></tr>
+						</table>
+						<table class="nolines small">
+							<tr><td class="highlight-cyan">a</td><td><span class="highlight-red">а</span>, <span class="highlight-red">я</span></td></tr>
+							<tr><td class="highlight-cyan">â</td><td class="highlight-red">я</td></tr>
+							<tr><td class="highlight-cyan">ı</td><td class="highlight-red">ы</td></tr>
+							<tr><td class="highlight-cyan">o</td><td><span class="highlight-red">о</span>, <span class="highlight-red">ё</span></td></tr>
+							<tr><td class="highlight-cyan">u</td><td><span class="highlight-red">у</span>, <span class="highlight-red">ю</span></td></tr>
+							<tr><td class="highlight-cyan">e</td><td><span class="highlight-red">э</span>, <span class="highlight-red">е</span></td></tr>
+							<tr><td class="highlight-cyan">i</td><td class="highlight-red">и</td></tr>
+							<tr><td class="highlight-cyan">ö</td><td><span class="highlight-red">о</span>, <span class="highlight-red">ё</span></td></tr>
+							<tr><td class="highlight-cyan">ü</td><td><span class="highlight-red">у</span>, <span class="highlight-red">ю</span></td><td>
+						</table>
+					</div>
+					<div style="float: left; width: 65%">
+						<ul>
+							<li><span class="highlight-cyan">Latin</span> orthography:</li>
+							<ul>
+								<li>31 characters</li>
+								<li>each phoneme a distinct character</li>
+								<li>digraphs only for foreign sounds</li>
+								<li>Russian words can be treated as adapted to phonology or not:<br />
+									<ex>bücet</ex> / *byudjet for бюджет <gl>budget</gl><br/>
+									<ex>konki</ex> for коньки [kɐnʲˈkʲi] <gl>skates</gl></li>
+							</ul>
+							<li><span class="highlight-red">Cyrillic</span> orthography:</li>
+							<ul>
+								<li>33 characters of Russian alphabet</li>
+								<li>4 digraphs: <ex>дж</ex> [ʤ], <ex>гъ</ex> [ʁ], <ex>къ</ex> [q], <ex>нъ</ex> [ŋ]</li>
+								<li>Russian words are spelled as in Russian:<br />
+									<ex>бюджет</ex> <gl>budget</gl>, <ex>коньки</ex> <gl>skates</gl></li>
+							</ul>
+						</ul>
+					</div>
 				</section>
 				<section>
 					<h2>Background: Prior work</h2>
