@@ -788,6 +788,7 @@ e:э <=> .#. _ ;<br/>
 
 				<section>
 					<h2>Methodology: Error Model</h2>
+					informed by actual errors in corpora
 				</section>
 
 				<section>
@@ -833,6 +834,17 @@ e:э <=> .#. _ ;<br/>
 
 				<section>
 					<h2>Future work</h2>
+					<ul>
+						<li>Apply biscriptual methodology to different languages:<br />
+						<ul>
+							<li><span class="highlight">multiple normative orthographies</span>: <b>Uyghur</b> (China/Kazakhstan), <b>Azeri</b> (Azerbaijan/Iran), <b>Kyrgyz</b> (China/Kyrgyzstan), <b>Kazakh</b> (Kazakhstan/China), <b>Uzbek</b> (Uzbekistan/Afghanistan)</li>
+							<li><span class="highlight">recently superceded orthographies</span>: <b>Uzbek</b>, <b>Azeri</b>, <b>Karakalpak</b>, <b>Turkmen</b>, <b>Uzbek</b> (1990s + coming soon) <b>Kazakh</b> (coming soon)</li>
+							<li>Some of these have 3 or more scripts, all have FOS FSTs</li>
+							<li>Advantage: new orthography, don't have to rewrite entire transducer</li>
+						</ul>
+						<li>Use transducer for dependency parsing (already initial steps)</li>
+						<li>Reduce size of <em>n</em>-gram model while maintaining quality of output</li>
+						<li>Study actual error patterns &amp; improve error model</li>
 				</section>
 
 				<section>
