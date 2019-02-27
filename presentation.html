@@ -777,10 +777,9 @@ e:э <=> .#. _ ;<br/>
 								<li>Yields a transducer from lexical forms to Cyrillic surface forms</li>
 								<li>This is then unioned with the original Latin-alphabet transducer</li>
 							</ul>
-							<li>Due to non-deterministic nature of mapping, we add a weighted model to choose correct transliteration based on empirical evidence</li>
+							<li>Due to non-deterministic nature of mapping, we add a weighted model to choose most adequate transliteration based on empirical evidence</li>
 							<ul>
-								<li>Favorable weights to forms seen in corpora</li>
-								<li>Weights based on (up-to-)<em>n</em>-grams</li>
+								<li>Favourable weights (based on (up-to-)<em>n</em>-grams) to forms seen in corpora</li>
 								<li>Compile into <em>n</em>-gram-weighted transducer</li>
 								<li>Compose transliteration transducer with weighted transducer</li>
 								<li>Union this composed transducer with the form transducer to prioritise forms we found in the corpus</li>
