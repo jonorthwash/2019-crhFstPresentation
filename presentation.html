@@ -779,8 +779,7 @@ e:э <=> .#. _ ;<br/>
 							</ul>
 							<li>Due to non-deterministic nature of mapping, we add a weighted model to choose most adequate transliteration based on empirical evidence</li>
 							<ul>
-								<li>Favourable weights based on (up-to-)<em>n</em>-grams) to forms seen in corpora</li>
-								<li>Compile into <em>n</em>-gram-weighted transducer</li>
+								<li>Favourable weights based on (up-to-)<em>n</em>-grams) to forms seen in corpora,  compiled into <em>n</em>-gram-weighted transducer</li>
 								<li>Compose transliteration transducer with weighted transducer</li>
 								<li>Union this composed transducer with the form transducer to prioritise forms we found in the corpus</li>
 							</ul>
