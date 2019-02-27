@@ -738,7 +738,7 @@
 
 				<section>
 					<h2>Methodology: Lexicon</h2>
-					<table>
+					<table style="float: left; margin-right: 1em;">
 						<tr><th>Part of speech</th><th>№ stems</th></td>
 						<tr><td>Noun</td><td class="raln">6,271</td></tr>
 						<tr><td>Proper noun</td><td class="raln">4,123</td></tr>
@@ -752,6 +752,11 @@
 						<tr><td>Determiner</td><td class="raln">16</td></tr>
 						<tr><td class="highlight">Total:</td><td class="raln highlight">13,054</td></tr>
 					</table>
+					<div style="float: left;">
+						<ul>
+							<li>
+						</ul>
+					</div>
 				</section>
 
 
@@ -776,6 +781,9 @@ e:э <=> .#. _ ;<br/>
 							<ul>
 								<li>Favorable weights to forms seen in corpora</li>
 								<li>Weights based on (up-to-)<em>n</em>-grams</li>
+								<li>Compile into <em>n</em>-gram-weighted transducer</li>
+								<li>Compose transliteration transducer with weighted transducer</li>
+								<li>Union this composed transducer with the form transducer to prioritise forms we found in the corpus</li>
 							</ul>
 						</ul>
 				</section>
