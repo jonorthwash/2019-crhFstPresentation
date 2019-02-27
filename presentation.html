@@ -375,7 +375,7 @@
 				padding: 0.5em !important;
 				text-align: left ;
 				font-family: "DejaVu Sans Mono", "Liberation Mono", monospace !important ;
-				font-size: 70% !important ;
+				font-size: 80% !important ;
 				color: #6f6;
 				line-height: 0.975 !important;
 			}
@@ -701,7 +701,7 @@
 					<h2>Methodology: Morphotactics</h2>
 					<ul>
 						<li>Maps analysis to/from morphotactic form:<br /><span class="code">köy<tag>n</tag><tag>px3sp</tag><tag>loc</tag></span> ↔ <span class="code">köy&gt;<arch>s</arch><arch>I</arch><arch>n</arch>&gt;<arch>D</arch><arch>A</arch></span></li>
-						<li>Use <code>lexc</code> formalism as implemented in HFST</li>
+						<li>Uses <code>lexc</code> formalism as implemented in HFST</li>
 						<ul>
 							<li>Lexicons list mapping between analysis and morphemes and point to following lexicon</li>
 						</ul>
@@ -717,7 +717,13 @@
 
 				<section>
 					<h2>Methodology: Morphophonology</h2>
-					<p>maps <span class="code">köy&gt;<arch>s</arch><arch>I</arch><arch>n</arch>&gt;<arch>D</arch><arch>A</arch></span> ↔ <span class="code">köyünde</span></p>
+					<ul>
+						<li>Maps morphotactic form to orthographic form:<br /><span class="code">köy&gt;<arch>s</arch><arch>I</arch><arch>n</arch>&gt;<arch>D</arch><arch>A</arch></span> ↔ <span class="code">köyünde</span></li>
+						<li>Uses <code>twol</code> formalism as implemented in HFST</li>
+						<ul>
+							<li>Symbols constrained in mapping by specific environments
+</li>
+						</ul>
 				</section>
 
 				<section>
@@ -742,7 +748,14 @@
 				<section>
 					<h2>Methodology: Transliterator</h2>
 						<ul>
-							<li><code>lexc</code> and <code>twol</code> to propose/constrain transliterations to Cyrillic</li>
+							<li><code>lexc</code> and <code>twol</code> to propose/constrain transliterations to Cyrillic<br />
+							<div class="codeblock">
+"e as э"<br />
+e:э <=> .#. _ ;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ e: | a: | i: | ü: ] _ ;
+							</div>
+							<em>Latin ‹e› [e] corresponds to Cyrillic ‹э› (instead of Cyrillic ‹е›, otherwise [je]) at the beginning of the word and after certain vowels.</em>
+							</li>
 							<li>Choose correct transliteration based on empirical evidence</li>
 							<ul>
 								<li>Favorable weights to forms seen in corpora</li>
