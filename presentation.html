@@ -796,25 +796,29 @@ e:э <=> .#. _ ;<br/>
 				<section>
 					<h2>Methodology: Error Model</h2>
 					<ul>
-						<li>Justification:</li>
+						<li><span class="highlight">Justification</span>: orthographic variation is inevitable</li>
 						<ul>
 							<li>Crimean Tatar has less-than-stable written norm</li>
 							<li>Little support for proofing tools or keyboards</li>
-							<li>Orthographicn variation is inevitable</li>
-							<li>We still want a high-coverage resource</li>
 						</ul>
-						<li>Strategy:</li>
+						<li><span class="highlight">Strategy</span>: we still want a high-coverage resource</li>
 						<ul>
 							<li>Be generous regarding what forms are analysed/accepted</li>
 							<li>Be conservative with what forms are generated/produced</li>
 						</ul>
-						<li>Implementation:
+						<li>Model informed by <span class="highlight">actual errors</span> in corpora</li>
 						<ul>
-							<li>
+							<li>E.g., Belarus<tag>np</tag><tag>top</tag><tag>loc</tag>: <ex>Belarusde</ex> (4), <ex><u>Belarusta</u></ex> (2), <ex>Belaruste</ex> (1)</li>
+						</ul>
+						<li><span class="highlight">Implementation:</span>
+						<ul>
+							<li>Created unconstrained <code>twol</code> transducer (all mappings possible)<br/>e.g., <span class="codeblock"><archc>A</archc>:e <archc>A</archc>:a <archc>D</archc>:d <archc>D</archc>:t</span></li>
+							<li>Composed with lexicon (<code>lexc</code> transducer = morphotactic forms)</li>
+							<li>Subtracted from normative transducer, appending <tag>err_orth</tag> to analysis side of remaining forms</li>
+							<li>Result unioned with normative transducer<br />e.g., <ex>Belaruste</ex> : Belarus<tag>np</tag><tag>top</tag><tag>loc</tag><tag>err_orth</tag></li>
 						</ul>
 
 					</ul>
-					informed by actual errors in corpora
 				</section>
 
 				<section>
