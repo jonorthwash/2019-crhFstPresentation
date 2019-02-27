@@ -631,11 +631,6 @@
 							<li>Several thousand new stems</li>
 							<li>We've been incorporating (categorising) them gradually</li>
 						</ul>
-						<li>Morphotactics adapted from Kazakh transducer</li>
-						<ul>
-							<li><span class="highlight">Nominal morphotactics</span> almost identical</li>
-							<li><span class="highlight">Verbal morphotactis</span> rather different</li>
-						</ul>
 					</ul>
 				</section>
 
@@ -704,7 +699,19 @@
 
 				<section>
 					<h2>Methodology: Morphotactics</h2>
-					<p>maps <span class="code">köy<tag>n</tag><tag>px3sp</tag><tag>loc</tag></span> ↔ <span class="code">köy&gt;<arch>s</arch><arch>I</arch><arch>n</arch>&gt;<arch>D</arch><arch>A</arch></span></p>
+					<ul>
+						<li>Maps analysis to/from morphotactic form:<br /><span class="code">köy<tag>n</tag><tag>px3sp</tag><tag>loc</tag></span> ↔ <span class="code">köy&gt;<arch>s</arch><arch>I</arch><arch>n</arch>&gt;<arch>D</arch><arch>A</arch></span></li>
+						<li>Use <code>lexc</code> formalism as implemented in HFST</li>
+						<ul>
+							<li>Lexicons list mapping between analysis and morphemes and point to following lexicon</li>
+						</ul>
+						<li>Morphotactics adapted from our Kazakh transducer</li>
+						<ul>
+							<li><span class="highlight">Nominal morphotactics</span> almost identical</li>
+							<li><span class="highlight">Verbal morphotactis</span> rather different</li>
+						</ul>
+						<li><code>compose-intersect</code>ed with morphophonoloy transducer</li>
+					</ul>
 				</section>
 
 
@@ -745,6 +752,10 @@
 				</section>
 
 				<section>
+					<h2>Methodology: Error Model</h2>
+				</section>
+
+				<section>
 					<h2>Evaluation: Coverage</h2>
 
 <table>
@@ -757,9 +768,6 @@
 </table>
 				</section>
 
-				<section>
-					<h2>Evaluation: Error Model</h2>
-				</section>
 
 				<section>
 					<h2>Evaluation: Transducer accuracy</h2>
