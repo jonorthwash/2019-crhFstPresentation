@@ -262,12 +262,16 @@
 			arch::before {
 				content: "{";
 				color: silver !important ;
+				font-style: normal !important ;
 			}
 			arch::after {
 				content: "}";
 				color: silver !important ;
+				font-style: normal !important ;
 			}
-
+			arch {
+				font-style: normal !important ;
+			}
 
 
 			/* ungrammatical glosses and examples */
@@ -628,6 +632,7 @@
 						<li>Altıntaş and Çiçekli closed source transducer</li>
 						<ul>
 							<li><span class="highlight">Lexicon</span> was eventually obtained as open source</li>
+							<li>Uses <code>xfst</code>, stems uncategorised</li>
 							<li>Several thousand new stems</li>
 							<li>We've been incorporating (categorising) them gradually</li>
 						</ul>
@@ -732,13 +737,13 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ :BackVow :Cns :Cns* <archc>ь</archc>:0 :Cns* ]/[ :0 ]* _ ;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ <archc>e</archc>:0 | <archc>ö</archc>:0 ]/[ :0 | :Cns | <span style="color: silver !important">%</span>- | <span style="color: silver !important">%</span>% ]* _ ;
 							</div>
-							<p>results in <arch style="color: lightgreen !important;">A</arch> mapping to <ex>e</ex> (as opposed to <ex>a</ex>) in appropriate environments</p>
+							<p><em><arch style="color: lightgreen !important;">A</arch> maps to <ex>e</ex> (as opposed to <ex>a</ex>) in appropriate environments</em></p>
 						</ul>
 				</section>
 
 				<section>
 					<h2>Methodology: Lexicon</h2>
-					<table style="float: left; margin-right: 1em;">
+					<table style="float: left; width: 45%; margin-right: 1em;">
 						<tr><th>Part of speech</th><th>№ stems</th></td>
 						<tr><td>Noun</td><td class="raln">6,271</td></tr>
 						<tr><td>Proper noun</td><td class="raln">4,123</td></tr>
@@ -752,9 +757,11 @@
 						<tr><td>Determiner</td><td class="raln">16</td></tr>
 						<tr><td class="highlight">Total:</td><td class="raln highlight">13,054</td></tr>
 					</table>
-					<div style="float: left;">
+					<div style="float: left; width: 50%">
 						<ul>
-							<li>
+							<li>Added a small range of stems initially to develop morphotactics</li>
+							<li>Later added stems based on frequency lists</li>
+							<li>And have been incorporating some from Altıntaş &amp; Çiçekli</li>
 						</ul>
 					</div>
 				</section>
@@ -788,6 +795,25 @@ e:э <=> .#. _ ;<br/>
 
 				<section>
 					<h2>Methodology: Error Model</h2>
+					<ul>
+						<li>Justification:</li>
+						<ul>
+							<li>Crimean Tatar has less-than-stable written norm</li>
+							<li>Little support for proofing tools or keyboards</li>
+							<li>Orthographicn variation is inevitable</li>
+							<li>We still want a high-coverage resource</li>
+						</ul>
+						<li>Strategy:</li>
+						<ul>
+							<li>Be generous regarding what forms are analysed/accepted</li>
+							<li>Be conservative with what forms are generated/produced</li>
+						</ul>
+						<li>Implementation:
+						<ul>
+							<li>
+						</ul>
+
+					</ul>
 					informed by actual errors in corpora
 				</section>
 
