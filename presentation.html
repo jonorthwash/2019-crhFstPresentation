@@ -710,6 +710,8 @@
 							<li><span class="highlight">Nominal morphotactics</span> almost identical</li>
 							<li><span class="highlight">Verbal morphotactis</span> rather different</li>
 						</ul>
+						<li>Implemented in <span class="highlight">Latin script</span> with transliterator for Cyrillic</li>
+						<li>Tagset based on tagset of other Apertium-platform Turkic transducers</li>
 						<li><code>compose-intersect</code>ed with morphophonoloy transducer</li>
 					</ul>
 				</section>
@@ -723,6 +725,14 @@
 						<ul>
 							<li>Symbols constrained in mapping by specific environments
 </li>
+						</ul>
+							<div class="codeblock">
+"Vowel harmony for <arch>A</arch>"<br />
+<archc>A</archc>:e <=> [ :FrontVow :Cns :Cns* ]/[ :0 - <archc>ъ</archc>: ]* _ ;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ :BackVow :Cns :Cns* <archc>ь</archc>:0 :Cns* ]/[ :0 ]* _ ;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ <archc>e</archc>:0 | <archc>ö</archc>:0 ]/[ :0 | :Cns | <span style="color: silver !important">%</span>- | <span style="color: silver !important">%</span>% ]* _ ;
+							</div>
+							<p>results in <arch style="color: lightgreen !important;">A</arch> mapping to <ex>e</ex> (as opposed to <ex>a</ex>) in appropriate environments</p>
 						</ul>
 				</section>
 
